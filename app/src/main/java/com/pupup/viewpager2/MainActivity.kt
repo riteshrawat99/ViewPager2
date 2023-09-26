@@ -20,13 +20,22 @@ class MainActivity : AppCompatActivity() {
         pagerAdapter.fragment.add(Fragment1()) // add Fragment
         pagerAdapter.fragment.add(Fragment2()) // add Fragment
         pagerAdapter.fragment.add(Fragment3()) // add Fragment
+        pagerAdapter.fragment.add(Fragment4()) // add Fragment
 
-        pagerAdapter.tittle.add("Tab 1")    // add tittle
-        pagerAdapter.tittle.add("Tab 2")    // add tittle
-        pagerAdapter.tittle.add("Tab 3")    // add tittle
+
+
+//
+//        pagerAdapter.tittle.add("Tab 1")    // add tittle
+//        pagerAdapter.tittle.add("Tab 2")    // add tittle
+//        pagerAdapter.tittle.add("Tab 3")    // add tittle
+//        pagerAdapter.tittle.add("Tab 4")
 
         viewPager.adapter = pagerAdapter  // assign pager adapter in ViewPager element
         tabLayout.setupWithViewPager(viewPager)
 
+        tabLayout.getTabAt(0)?.setIcon(R.drawable.baseline_store_mall_directory_24)
+        tabLayout.getTabAt(1)?.text = "Tab 2"
+        tabLayout.getTabAt(2)?.text = "Tab 3"
+        tabLayout.getTabAt(3)?.text = "Tab 4"
     }
 }
